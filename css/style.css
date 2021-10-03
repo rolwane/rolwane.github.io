@@ -66,7 +66,6 @@
 }
 
 
-
 /* ----- CLASSES PERSONALIZADAS ----- */
 
 .container {
@@ -88,6 +87,7 @@
     font-size: 35px;
     font-weight: 500;
     margin-bottom: 40px;
+    color: #333;
 }
 
 .title-lg {
@@ -96,4 +96,73 @@
 
 .light {
     font-weight: 300;
+}
+
+
+/* ----- CSS SECTION ABOUT ME ----- */
+
+#about {
+    padding-top: 50px
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 15px;
+    color: #333;
+    width: 100px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.fill {
+    background: #333;
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.skill:nth-child(1) .fill{
+    width: 85%;
+}
+
+.skill:nth-child(2) .fill{
+    width: 70%;
+}
+
+.skill:nth-child(3) .fill{
+    width: 50%;
+}
+
+.col-6:nth-child(1) p{
+    color: #555;
+    font-size: 16px;
+}
+
+.col-6:nth-child(1) p:nth-child(1), .col-6:nth-child(1) p:nth-child(4){
+    color: #333;
+    font-weight: 600;
+}
+
+.col-6:nth-child(1) p:nth-child(2), .col-6:nth-child(1) p:nth-child(3){
+    margin-bottom: 30px;
+}
+
+
+
+.redes {
+    width: 30px;
+    margin: 10px 20px 0px 0px;
 }
