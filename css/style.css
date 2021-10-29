@@ -4,75 +4,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins, sans-serif;
     scroll-behavior: smooth;
+    line-height: 1.7;
 }
 
-#home {
-    width: 100%;
-    min-height: 100vh;
-    background: url('../images/bg-home.jpg') center fixed;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-}
-
-#opening {
-    color: #fff;
-    text-align: center;
-}
-
-#opening img {
-    width: 180px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
-}
-
-#opening h1 {
-    margin: 15px 0px 0px 0px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    line-height: 50px;
-}
-
-#opening h1 span{
-    font-size: 30px;
-}
-
-#opening p {
-    color: rgba(255, 255, 255, 0.5);
+p {
     font-size: 16px;
-    margin: 15px 0px 0px 0px;
-    letter-spacing: 4px;
-    font-weight: 700;
+    color: rgb(85, 85, 85);
 }
 
-#btn-vermais {
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 30px;
-    border-radius: 100px;
-    display: inline-block;
-    font-weight: 500;
-    margin-top: 50px;
-}
-
-#btn-vermais:hover {
-    background: #fff;
-    color: #000;
-}
-
-
-/* ----- CLASSES PERSONALIZADAS ----- */
+/* ----- General Classes ----- */
 
 .container {
     width: 100%;
     max-width: 1280px;
-    padding: 30px;
     margin: 0 auto;
+}
+
+.title-section {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: rgb(51, 51, 51);
+}
+
+.p-strong {
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+}
+
+.align-center {
+    text-align: center;
 }
 
 .row {
@@ -84,191 +47,127 @@
     width: 50%;
 }
 
-.title-section {
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: 40px;
-    color: #333;
-}
+/* ----- Home CSS ----- */
 
-.title-lg {
-    font-size: 40px;
-}
-
-.light {
-    font-weight: 300;
-}
-
-
-/* ----- CSS SECTION ABOUT ME ----- */
-
-#about {
-    padding-top: 50px;
-    margin-bottom: 60px
-}
-
-.bar {
+#home {
     width: 100%;
-    height: 15px;
-    border-radius: 50px;
-    background: rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
-
-.skill-name {
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 15px;
-    color: #333;
-    width: 100px;
-}
-
-.skill {
+    min-height: 100vh;
+    background: url('../images/bg-home.jpg') center;
+    background-size: cover;
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+#welcome {
+    color: white;
+    text-align: center;
+}
+
+#welcome img {
+    border-radius: 50%;
+    width: 180px;
+    border: 4px solid white;
     margin-bottom: 15px;
 }
 
-.fill {
-    background: #333;
-    width: 0;
-    height: 100%;
-    border-radius: 50px;
-    color: #fff;
-    font-size:10px;
+#welcome h1 {
+    font-size: 40px;
+}
+
+#welcome span {
+    font-weight: 300;
+    display: block;
+    font-size: 30px;
+}
+
+#welcome p {
+    color: rgba(255, 255, 255, 0.5);
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    letter-spacing: 4px;
+    margin-top: 5px;
 }
 
-.skill:nth-child(1) .fill{
-    width: 85%;
-}
-
-.skill:nth-child(2) .fill{
-    width: 70%;
-}
-
-.skill:nth-child(3) .fill{
-    width: 50%;
-}
-
-.skill:nth-child(4) .fill{
-    width: 60%;
-}
-
-.col-6:nth-child(1) p{
-    color: #555;
+#btn-ver-mais {
+    padding: 10px 30px;
+    display: inline-block;
+    background: none;
+    color: white;
+    font-weight: 500;
     font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid white;
+    margin-top: 50px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
 }
 
-.col-6:nth-child(1) p:nth-child(1), .col-6:nth-child(1) p:nth-child(4){
-    color: #333;
-    font-weight: 600;
+/* ----- ABOUT ME CSS ----- */
+
+#about {
+    padding: 50px 30px 30px;
 }
 
-.col-6:nth-child(1) p:nth-child(2), .col-6:nth-child(1) p:nth-child(3){
+.link-mail {
+    color: rgb(85, 85, 85);
+}
+
+.rede-icon {
+    width: 35px;
+    margin:10px 15px 0 0;
+}
+
+.col-6:nth-child(1) {
+    padding-right: 40px;
     margin-bottom: 30px;
 }
 
-.redes {
-    width: 30px;
-    margin: 10px 20px 50px 0px;
+.competence {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-
-
-/* ----- CSS SECTION JOBS ----- */
-
-#container-jobs {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+.competence p {
+    margin-left: 20px;
+    width: 100px;
 }
 
-.job {
+.progress {
     width: 100%;
-    height: 300px;
-    background: #222;
-    border-radius: 8px;
+    height: 10px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    cursor: pointer;
-    position: relative;
+    flex: 1;
 }
 
-.job img {
-    width: 100%;
+.fill {
+    width: 0;
+    height: 10px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 12px;
+    transition-duration: 1s;
 }
 
-.job:hover .shadow {
-    opacity: 1;
-}
+/* ----- PROJECTS CSS ----- */
 
-.job:hover .shadow h2{
-    transform: translate(0, 0px);
-    
-}
-
-.shadow {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-    transition-duration: 0.5s;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.shadow h2 {
-    transform: translate(0, 20px);
-    transition-duration: 0.5s;
-}
-
-
-/* ----- CSS FOOTER ----- */
-
-#footer {
-    background: #222;
-    width: 100%;
-    min-height: 250px;
-    margin-top: 200px;
-    color: #fff;
+#projects {
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-footer {
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 20px 10px 10px 10px;
-}
-
-.icon-footer img{
-    width: 100%;
-}
-
-#icons-footer {
-    display: flex;
+    margin-top: 30px;
 }
 
 
-
-
-/* ----- QUERIES ----- */
+/* --- MEDIA QUERIES ----- */
 
 @media (max-width: 768px) {
-    .col-md {
+    .col-md-6 {
         width: 100%;
+    }
+    .col-6:nth-child(1) {
+        padding-right: 0;
     }
 }

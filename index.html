@@ -1,117 +1,77 @@
-<doctype html>
+<!doctype html>
 <html lang="pt-br">
+
 <head>
+  <!-- Required Meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <!-- Required Meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./css/style.css">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-
-    <title>Portfolio - Rolwane Borges</title>
+  <!-- Page Title -->
+  <title>Portfolio - Rolwane Borges</title>
 </head>
+
 <body>
 
   <section id="home">
-
-    <div id="opening">
-      <img src="./images/foto.png" alt="foto-de-perfil">
-      <h1 class="title-lg"> <span class="light">Olá, sou</span> <br>Rolwane Borges</h1>
+    <div id="welcome">
+      <img src="./images/me.png" alt="foto-perfil">
+      <h1> <span>Olá, sou</span> Rolwane Borges</h1>
       <p>DESENVOLVEDOR FULL STACK</p>
-      <a href="#about" id="btn-vermais">Ver mais!</a>
-    </div> <!-- fim opening -->
-
+      <a href="#about" id="btn-ver-mais">Ver mais!</a>
+      <span id="teste"></span>
+    </div>
   </section> <!-- fim home -->
 
-  <main class="container">
-
-    <section id="about">
-
+  <section id="about">
+    <div class="container">
       <h1 class="title-section">Sobre mim</h1>
-
       <div class="row">
 
-        <div class="col-6 col-md" style="padding-right: 40px;">
-          <p>Estudante de Desenvolvimento Web | Trybe</p>
-          <p>Ceará, Brasil &bull; rolwane@hotmail.com</p>
-
-          <p>Apaixonado por tecnologia e música, aspirante a Desenvolvedor Web, e um entusiasta do Audiovisual.</p>
-
-          <p>Redes:</p>
-          <a href="https://github.com/rolwane" target="_blank"><img class="redes" src="./images/github.png" alt="github" style="width: 32px"></a>
-          <a href="https://www.linkedin.com/in/rolwane-borges-547677221" target="_blank"><img class="redes" src="./images/linkedin.png" alt="github"></a>
+        <div class="col-6 col-md-6">
+          <p class="p-strong">Estudante de Desenvolvimento Web | Trybe</p>
+          <p>Ceará, Brasil  &bull; <a href="mailto:rolwane@hotmail.com" target="_blank" class="link-mail">rolwane@hotmail.com</a></p> <br>
+          <p>Apaixonado por tecnologia e música, aspirante a Desenvolvedor Web, e um entusiasta do Audiovisual.</p> <br>
+          <p class="p-strong">Redes:</p>
+          <a href="https://github.com/rolwane" target="_blank"><img class="rede-icon" src="./images/github.png" alt="github-icon"></a>
+          <a href="https://linkedin.com/in/rolwane" target="_blank"><img class="rede-icon" src="./images/linkedin.png" alt="github-icon"></a>
         </div>
 
-        <div class="col-6 col-md">
-
-          <div class="skill">
-            <div class="bar"><div class="fill">85%</div></div><span class="skill-name">HTML5</span>
+        <div class="col-6 col-md-6">
+          <div class="competence">
+            <div class="progress"><div class="fill"></div></div>
+            <p class="p-strong">HTML5</p>
           </div>
-
-          <div class="skill">
-            <div class="bar"><div class="fill">70%</div></div> <span class="skill-name">CSS3</span>
+          <div class="competence">
+            <div class="progress"><div class="fill"></div></div>
+            <p class="p-strong">CSS3</p>
           </div>
-
-          <div class="skill">
-            <div class="bar"><div class="fill">50%</div></div> <span class="skill-name">JavaScript</span>
+          <div class="competence">
+            <div class="progress"><div class="fill"></div></div>
+            <p class="p-strong">JavaScript</p>
           </div>
-
-          <div class="skill">
-            <div class="bar"><div class="fill">60%</div></div> <span class="skill-name">MySql</span>
+          <div class="competence">
+            <div class="progress"><div class="fill"></div></div>
+            <p class="p-strong">React</p>
           </div>
-
-        </div> <!-- fim col -->
-
-      </div> <!-- fim row -->
-
-    </section> <!-- fim about -->
-
-    <section id="jobs">
-
-      <h1 class="title-section" style="text-align: center;">Portfolio</h1>
-
-      <div id="container-jobs">
-
-        <div class="job">
-          <div class="shadow"><h2>Project Name</h2></div>
-          <img src="./images/01.jpg" alt="job-01">
-        </div>
-
-        <div class="job">
-          <div class="shadow"><h2>Project Name</h2></div>
-          <img src="./images/02.jpg" alt="job-01">
-        </div>
-
-        <div class="job">
-          <div class="shadow"><h2>Project Name</h2></div>
-          <img src="./images/03.jpg" alt="job-01">
-        </div>
-
-        <div class="job">
-          <div class="shadow"><h2>Project Name</h2></div>
-          <img src="./images/01.jpg" alt="job-01">
         </div>
 
       </div>
+    </div>
+  </section>
 
-    </section>
+  <section id="projects">
+    <div class="container">
 
-  </main> <!-- fim container -->
+      <h1 class="title-section align-center">Projetos</h1>
 
-    <section>
+    </div>
+  </section>
 
-      <footer id="footer">
-        <h4>Conecte-se</h4>
-    
-        <div id="icons-footer">
-          <a href="https://github.com/rolwane" target="_blank"><div class="icon-footer"><img src="./images/github.png" alt="github-icon"></div></a>
-          <a href="https://www.linkedin.com/in/rolwane-borges-547677221" target="_blank"><div class="icon-footer"><img src="./images/linkedin.png" alt="github-icon"></div></a>
-        </div>
-      </footer>
-
-    </section>
-
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
