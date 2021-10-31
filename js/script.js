@@ -1,17 +1,20 @@
-window.addEventListener('scroll', () => {
-
+function parallax() {
     let scroll = document.documentElement.scrollTop;
+    document.querySelector('#bg-home').style.top = `${scroll * 0.5}px`;
+}
 
-    // Efeito parallax no background da home
-    document.querySelector('#home').style.backgroundPositionY = `${scroll * 0.6}px`;
-
-
-    let competencePosition = document.querySelector('.competence').offsetTop;
-
-    if (scroll > (competencePosition / 3)) {
-        document.querySelector('.competence:nth-child(1) .fill').style.width = '85%';
-        document.querySelector('.competence:nth-child(2) .fill').style.width = '75%';
-        document.querySelector('.competence:nth-child(3) .fill').style.width = '50%';
-        document.querySelector('.competence:nth-child(4) .fill').style.width = '20%';
+function competenceAnimation() {
+    let scroll = document.documentElement.scrollTop;
+    let competence = document.querySelectorAll('.competence .fill');
+    if (scroll > (competence[0].offsetTop / 2)) {
+        competence[0].style.width = '90%';
+        competence[1].style.width = '75%';
+        competence[2].style.width = '50%';
+        competence[3].style.width = '20%';
     }
+}
+
+window.addEventListener('scroll', () => {
+    parallax();
+    competenceAnimation();
 });
