@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+span {
+  display: inline-block;
+  background-color: whitesmoke;
+  margin-right: 10px;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url('./images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}
+
+section {
+  width: 80%;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  min-height: 300px;
+  position: relative;
+}
+
+section div {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  outline: none;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  flex: 1;
+}
+
+button {
+  padding: 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 560;
+  font-size: 14px;
+  color: white;
+  background-color: rgb(47, 193, 140);
+  cursor: pointer;
+}
+
+#span-contador {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 50px 30px 20px 0;
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+}
+
+#carta-gerada {
+  margin-bottom: 70px;
+}
