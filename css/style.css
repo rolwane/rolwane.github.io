@@ -1,224 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Poppins, sans-serif;
-    scroll-behavior: smooth;
-    line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  line-height: 1.7;
 }
-
-p {
-    font-size: 16px;
-    color: rgb(85, 85, 85);
-}
-
-/* ----- General Classes ----- */
-
-.container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.title-section {
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: 40px;
-    color: rgb(51, 51, 51);
-}
-
-.p-strong {
-    font-weight: 600;
-    color: rgb(51, 51, 51);
-}
-
-.align-center {
-    text-align: center;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col-6 {
-    width: 50%;
-}
-
-/* ----- Home CSS ----- */
 
 #home {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/bg-04.png);
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  padding: 30px;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#bg-home {
-    background: url('../images/bg-home.jpg') center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
+#shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
-#welcome {
-    color: white;
-    text-align: center;
-    z-index: 1;
+#home-content {
+  position: relative;
+  color: white;
+  z-index: 2;
+  margin-top: 80px;
 }
 
-#welcome img {
-    border-radius: 50%;
-    width: 180px;
-    border: 4px solid white;
-    margin-bottom: 15px;
+#home-hello {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-#welcome h1 {
-    font-size: 40px;
+#home-title {
+  font-size: 26px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#welcome span {
-    font-weight: 300;
-    display: block;
-    font-size: 30px;
+#write {
+  font-weight: 700;
+  margin-left: 15px;
+  text-align: center;
 }
 
-#welcome p {
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: 600;
-    letter-spacing: 4px;
-    margin-top: 5px;
+
+#bar {
+  width: 3px;
+  border-radius: 100px;
+  height: 40px;
+  background-color: white;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#icons {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+#icons a {
+  color: white;
+  font-size: 28px;
 }
 
 #btn-ver-mais {
-    padding: 10px 30px;
-    display: inline-block;
-    background: none;
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    border-radius: 50px;
-    border: 1px solid white;
-    margin-top: 50px;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
+  background: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: 2px solid white;
+  color: white;
+  display: block;
+  margin: 40px auto 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 400ms, color 400ms ease;
 }
 
-/* ----- ABOUT ME CSS ----- */
-
-#about {
-    padding: 50px 30px 30px;
+#btn-ver-mais:hover {
+  background-color: white;
+  color: black;
 }
 
-.link-mail {
-    color: rgb(85, 85, 85);
+@media screen and (min-width: 410px) {
+  #home-hello {
+    font-size: 20px;
+
+  }
+  #home-title {
+    font-size: 32px;
+  }
 }
 
-.rede-icon {
-    width: 35px;
-    margin:10px 15px 0 0;
+@media screen and (min-width: 600px) {
+  #home-title {
+    font-size: 45px;
+  }
 }
 
-.col-6:nth-child(1) {
-    padding-right: 40px;
-    margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  #home-title {
+    font-size: 65px;
+  }
+
+  #bar {
+    width: 5px;
+    height: 60px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
 }
 
-.competence {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+@media screen and (min-width: 960px) {
+  #home-title {
+    font-size: 75px;
+  }
 
-.competence p {
-    margin-left: 20px;
-    width: 100px;
-}
-
-.progress {
-    width: 100%;
-    height: 10px;
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    flex: 1;
-}
-
-.fill {
-    width: 0;
-    height: 10px;
-    background-color: rgb(51, 51, 51);
-    border-radius: 12px;
-    transition-duration: 1s;
-}
-
-/* ----- PROJECTS CSS ----- */
-
-#projects {
-    padding: 30px;
-    margin-top: 30px;
-}
-
-#container-projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px
-}
-
-.project {
-    width: 100%;
-    height: 280px;
-    background-color: rgb(51, 51, 51);
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.project a {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.title-project {
-    color: white;
-    font-size: 25px;
-    font-weight: 500;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: transform 500ms, opacity 300ms ease;
-}
-
-.project:hover .title-project {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-/* --- MEDIA QUERIES ----- */
-
-@media (max-width: 768px) {
-    .col-md-6 {
-        width: 100%;
-    }
-    .col-6:nth-child(1) {
-        padding-right: 0;
-    }
 }
