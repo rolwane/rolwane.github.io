@@ -1,42 +1,32 @@
 const myName = 'Rolwane Borges';
 const occupation1 = 'Web Developer';
 const occupation2 = 'Designer';
-const span = document.querySelector('#write');
+const span = document.querySelector('#typeWriter');
 
 let count = 2;
 
 function typeWriter(phrase) {
-
   setTimeout(() => {
-
     for (let i = 0; i < phrase.length; i++) {
       setTimeout(() => {
         span.innerHTML += phrase[i];
       }, 120 * i)
     }
-
   }, 900)
 
   setTimeout(() => {
-
     clearSpan();
-    
     if (count === 0) {
-      typeWriter(myName)
+      typeWriter(myName);
       count = 1;
-      
     } else if (count === 1) {
-      typeWriter(occupation1)
-      count = 2
-      
+      typeWriter(occupation1);
+      count = 2;
     } else {
       typeWriter(occupation2);
       count = 0;
-    }
-    
-    
-
-  }, 5500)
+    } 
+  }, 5500);
 }
 
 function clearSpan() {
@@ -49,9 +39,7 @@ function clearSpan() {
   }
 }
 
-let loop = setTimeout(() => {
-
+setTimeout(() => {
   clearSpan();
   typeWriter(occupation1);
-
-}, 2500)
+}, 2500);

@@ -8,133 +8,221 @@
   line-height: 1.7;
 }
 
+
+/* ----- General Classes ----- */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* ----- Home CSS ----- */
+
 #home {
   width: 100%;
-  height: 100vh;
-  background-image: url(../images/bg-04.png);
+  min-height: 100vh;
+  background: url('../images/bg-04.png') center top;
   background-size: cover;
-  background-position: center top;
   position: relative;
-  padding: 30px;
-  z-index: 0;
+  color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-#shadow {
+.mask {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
   top: 0;
-  z-index: 1;
+  left: 0;
 }
 
 #home-content {
   position: relative;
-  color: white;
-  z-index: 2;
-  margin-top: 80px;
-}
-
-#home-hello {
-  font-size: 16px;
-  font-weight: 500;
+  z-index: 1;
   text-align: center;
-  margin-bottom: 5px;
+  margin-top: 40px;
 }
 
-#home-title {
-  font-size: 26px;
+#home-content p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#home-content h1 {
+  font-size: 25px;
   font-weight: 300;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-#write {
+#home-content h1 span{
   font-weight: 700;
-  margin-left: 15px;
-  text-align: center;
+  margin: 0 6px;
 }
 
-
-#bar {
-  width: 3px;
-  border-radius: 100px;
-  height: 40px;
+#home-content h1 i {
+  width: 2px;
+  height: 30px;
   background-color: white;
   display: inline-block;
-  margin-left: 5px;
 }
 
-#icons {
-  text-align: center;
+#redes-icons {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-#icons a {
+#redes-icons a {
   color: white;
   font-size: 28px;
 }
 
-#btn-ver-mais {
-  background: none;
-  padding: 10px 30px;
-  border-radius: 50px;
+#btn-ver {
+  padding: 10px 25px;
   border: 2px solid white;
+  background: none;
+  border-radius: 50px;
   color: white;
-  display: block;
-  margin: 40px auto 0;
   font-weight: 500;
+  margin-top: 25px;
+  outline: none;
   cursor: pointer;
-  transition: background 400ms, color 400ms ease;
+  transition: background-color 300ms, color 300ms ease;
 }
 
-#btn-ver-mais:hover {
+#btn-ver:hover {
   background-color: white;
   color: black;
 }
 
-@media screen and (min-width: 410px) {
-  #home-hello {
-    font-size: 20px;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- Media Queries ----- */
+
+@media screen and (min-width: 375px) {
+  #home-content h1 {
+    font-size: 30px;
   }
-  #home-title {
-    font-size: 32px;
+
+  #home-content h1 i {
+    height: 35px;
   }
 }
 
-@media screen and (min-width: 600px) {
-  #home-title {
+@media screen and (min-width: 425px) {
+  #home-content h1 {
+    font-size: 35px;
+  }
+
+  #home-content h1 i {
+    height: 40px;
+    margin-top: 2px;
+  }
+
+  #home-content h1 span{
+    margin: 0 10px;
+  }
+
+  #home-content p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  #home-content h1 {
     font-size: 45px;
+  }
+
+  #redes-icons a {
+    font-size: 30px;
+  }
+
+  #home-content h1 i {
+    height: 50px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  #home-title {
-    font-size: 65px;
+  #home-content h1 {
+    font-size: 60px;
   }
 
-  #bar {
-    width: 5px;
-    height: 60px;
-    margin-left: 10px;
+  #redes-icons a {
+    font-size: 30px;
+  }
+
+  #home-content h1 i {
+    height: 55px;
     margin-top: 5px;
   }
 }
 
-@media screen and (min-width: 960px) {
-  #home-title {
-    font-size: 75px;
+@media screen and (min-width: 992px) {
+  #home-content h1 {
+    font-size: 70px;
   }
 
+  #redes-icons a {
+    font-size: 35px;
+  }
+
+  #home-content h1 i {
+    height: 55px;
+    margin-top: 5px;
+    width: 3px;
+  }
+
+  #home-content p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
 }
