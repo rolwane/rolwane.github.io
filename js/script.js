@@ -43,3 +43,8 @@ setTimeout(() => {
   clearSpan();
   typeWriter(occupation1);
 }, 2500);
+
+document.querySelector('#btn-ver').addEventListener('click', () => {
+  const aboutMePosition = document.querySelector('#about-me').offsetTop;
+  window.scrollTo(0, aboutMePosition);
+});
