@@ -5,6 +5,9 @@ const span = document.querySelector('#typeWriter');
 
 let count = 2;
 
+
+// Função que faz o efeito de digitação
+
 function typeWriter(phrase) {
   setTimeout(() => {
     for (let i = 0; i < phrase.length; i++) {
@@ -12,8 +15,28 @@ function typeWriter(phrase) {
         span.innerHTML += phrase[i];
       }, 120 * i)
     }
-  }, 900)
+  }, 900);
+}
 
+
+// Função que deleta como se tivesse digitando
+
+function clearSpan() {
+  let letras = span.innerHTML.split('');
+  for (let i = 0; i < letras.length; i++) {
+    setTimeout(() => {
+      letras.pop();
+      span.innerHTML = letras.join('')
+    }, 40 * i);
+  }
+
+  typeWriterLoop();
+}
+
+
+// Função de loop para o efeito de escrever fique se repetindo
+
+function typeWriterLoop() {
   setTimeout(() => {
     clearSpan();
     if (count === 0) {
@@ -29,22 +52,44 @@ function typeWriter(phrase) {
   }, 5500);
 }
 
-function clearSpan() {
-  let letras = span.innerHTML.split('');
-  for (let i = 0; i < letras.length; i++) {
-    setTimeout(() => {
-      letras.pop();
-      span.innerHTML = letras.join('')
-    }, 40 * i);
-  }
-}
+
+// timeOut para iniciar o loop do efeito de digitação
 
 setTimeout(() => {
   clearSpan();
   typeWriter(occupation1);
 }, 2500);
 
+
+// Efeito scroll ao clicar no btn ver-mais
+
 document.querySelector('#btn-ver').addEventListener('click', () => {
   const aboutMePosition = document.querySelector('#about-me').offsetTop;
   window.scrollTo(0, aboutMePosition);
+});
+
+
+// Função responsável por animar o fill das skills
+
+const progress = () => {
+  const skills = document.querySelectorAll('.skill .progress-fill');
+
+  for (let i = 0; i < skills.length; i++) {
+    let percent = i === 0 ? 90 : i === 1 ? 75 : 60;
+    setTimeout(() => skills[i].style.width = `${percent}%`, 200 * i);
+  }
+}
+
+
+// Variável para realizar um efeito de debounce
+
+let loop;
+
+window.addEventListener('scroll', () => {
+  clearTimeout(loop);
+  loop = setTimeout(() => {
+    const scroll = (document.documentElement.scrollTop) ;
+    const target = (document.querySelector('.skill').offsetTop) / 3;
+    if (scroll > target) progress();
+  }, 50)
 });
