@@ -88,8 +88,8 @@ let loop;
 window.addEventListener('scroll', () => {
   clearTimeout(loop);
   loop = setTimeout(() => {
-    const scroll = (document.documentElement.scrollTop) ;
-    const target = (document.querySelector('.skill').offsetTop) / 3;
+    const scroll = (document.documentElement.scrollTop + (window.innerHeight * 3) / 4);
+    const target = (document.querySelector('.skill').offsetTop);
     if (scroll > target) progress();
   }, 50)
 });
