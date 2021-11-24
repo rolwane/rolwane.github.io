@@ -81,9 +81,7 @@ const progress = () => {
 }
 
 
-// Variável para realizar um efeito de debounce
-
-let loop;
+let loop; // Variável usada para criar um efeito de debounce no evento scroll
 
 window.addEventListener('scroll', () => {
   clearTimeout(loop);
